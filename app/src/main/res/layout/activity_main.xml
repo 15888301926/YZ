@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:autofillHints="editTextNumberSigned"
+        android:ems="12"
+        android:inputType="textCapCharacters"
+        android:nextFocusDown="@+id/editText2"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/jzz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 解决EditText回车焦点   android:nextFocusDown="@id/（当前本上控件ID）"-->
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:autofillHints="editTextNumberSigned2"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:nextFocusDown="@+id/editText2"
+        android:selectAllOnFocus="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:text="@string/jcz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="true"
+        android:text="@string/CheckBox1"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="176dp"
+        android:checked="true"
+        android:text="@string/CheckBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/jcx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/result"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/tv_optitemdis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/optitemdis"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result"
+        app:layout_constraintStart_toStartOf="@+id/tv_result"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/tv_optseqdis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/optseqdis"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result"
+        app:layout_constraintStart_toStartOf="@+id/tv_result"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="74dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/del"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="75dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="16dp"
+        android:text="查询"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/ltv_seq"
+        app:layout_constraintEnd_toStartOf="@+id/tv_count"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/editText2"
+        tools:ignore="DuplicateIds,OnClick,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count"
+        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="@+id/ltv_count"
+        app:layout_constraintStart_toStartOf="@+id/ltv_count"
+        app:layout_constraintTop_toTopOf="@+id/editText2" />
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltv_id" />
+
+    <TextView
+        android:id="@+id/ltv_id"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="序号"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/ltv_jcz"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="检测值"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ltv_id"
+        app:layout_constraintTop_toTopOf="@+id/ltv_id" />
+
+    <TextView
+        android:id="@+id/ltv_item"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="品号"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ltv_jcz"
+        app:layout_constraintTop_toTopOf="@+id/ltv_id" />
+
+    <TextView
+        android:id="@+id/ltv_seq"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="流水码"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ltv_item"
+        app:layout_constraintTop_toTopOf="@+id/ltv_item" />
+
+    <TextView
+        android:id="@+id/ltv_result"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="结果"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ltv_seq"
+        app:layout_constraintTop_toTopOf="@+id/ltv_id" />
+
+    <TextView
+        android:id="@+id/ltv_count"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="计数"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/ltv_result"
+        app:layout_constraintTop_toTopOf="@+id/ltv_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
